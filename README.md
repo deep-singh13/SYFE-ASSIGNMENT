@@ -47,11 +47,11 @@
    pytest test_cases -s #for logging task information in terminal
    ```
 
-## Any Assumptions
+## Assumptions
 
 - The web application under test is accessible and stable.
 - WebDriver is managed automatically via `webdriver-manager`.
 - Python 3.9.6 or a compatible version is installed.
-- Required browsers (Chrome, Firefox, etc.) are installed for Selenium tests.
+- Required browser (Chrome) is installed for Selenium tests.
 - The Page Object Model (POM) structure is followed for better code organization.
 
