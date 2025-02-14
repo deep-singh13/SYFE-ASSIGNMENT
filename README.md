@@ -24,7 +24,7 @@
 
    ```sh
    git clone https://github.com/deep-singh13/SYFE-ASSIGNMENT.git
-   cd syfr_assignment
+   cd syfe_assignment
    ```
 
 2. **Create a Virtual Environment (Optional but Recommended):**
