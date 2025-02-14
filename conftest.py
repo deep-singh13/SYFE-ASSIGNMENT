@@ -23,3 +23,4 @@ def driver():
     time.sleep(1)
     yield driver
     driver.quit()
+    
