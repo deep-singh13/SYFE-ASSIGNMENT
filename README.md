@@ -23,8 +23,8 @@
 1. **Clone the Repository:**
 
    ```sh
-   git clone <repository_url>
-   cd <repository_folder>
+   git clone https://github.com/deep-singh13/SYFE-ASSIGNMENT.git
+   cd syfr_assignment
    ```
 
 2. **Create a Virtual Environment (Optional but Recommended):**
