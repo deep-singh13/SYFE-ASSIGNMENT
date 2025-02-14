@@ -15,7 +15,7 @@ def test_logging_out(driver):
 
     logging.info("checking successful redirection")
     time.sleep(2)
-    assert "https://www.saucedemo.com/" in driver.current_url
+    assert "https://www.saucedemo.com/" in driver.current_url #checking if redirection to base page is successful
     
     logging.info("successfull redirection")
     time.sleep(2)

@@ -4,7 +4,7 @@ import time
 
 
 class CheckoutPage(base_page):
-    #CHECKOUT_BUTTON = (By.XPATH , '//*[@id="checkout"]')
+    #locators for Checkout page
     FIRST_NAME_FIELD = (By.XPATH , '//*[@id="first-name"]')
     LAST_NAME_FIELD  = (By.XPATH , '//*[@id="last-name"]')
     POSTAL_CODE_FIELD = (By.XPATH ,'//*[@id="postal-code"]')
@@ -13,8 +13,8 @@ class CheckoutPage(base_page):
     FINISH_BUTTON = (By.XPATH, '//*[@id="finish"]')
     FINAL_THANKYOU_MESSAGE = (By.XPATH , '//*[@id="checkout_complete_container"]/h2')
 
+    #function for adding the checkout details
     def checkout_process(self, first_name, last_name, postal_code):
-        #self.click(self.CHECKOUT_BUTTON)
         time.sleep(2)
         self.enter_text(self.FIRST_NAME_FIELD , first_name)
         time.sleep(2)
@@ -25,15 +25,16 @@ class CheckoutPage(base_page):
         self.click(self.CONTINUE_BUTTON)
         time.sleep(2)
 
-
+    #function for returning the total amount displayed on checkout page
     def getting_total_amount(self):
         total_text = self.get_text(self.TOTAL_AMOUNT)
         return float(total_text.replace("Total: $", "").strip()) 
 
-
+    #function for clicking the finish button
     def clicking_finish(self):
         self.click(self.FINISH_BUTTON)
     
+    #function for returning  success message
     def checking_success_message(self):
         return self.get_text(self.FINAL_THANKYOU_MESSAGE)
 

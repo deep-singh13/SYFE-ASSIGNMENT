@@ -1,13 +1,13 @@
 from pages.inventory_page import InventoryPage
 import logging
-import time
+
 
 def test_add_items_to_cart(driver):
+    # Initialize the InventoryPage object with the provided WebDriver instance
     inventory_page = InventoryPage(driver)
-
     logging.info(f"setting sorting from low to high")
 
-    #sorting the items from low to high 
+
     inventory_page.sort_low_to_high()
     
     logging.info(f"entering items to cart from inventory page")
