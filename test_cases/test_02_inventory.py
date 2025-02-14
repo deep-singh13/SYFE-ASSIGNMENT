@@ -4,10 +4,15 @@ import time
 
 def test_add_items_to_cart(driver):
     inventory_page = InventoryPage(driver)
+
     logging.info(f"setting sorting from low to high")
+
+    #sorting the items from low to high 
     inventory_page.sort_low_to_high()
+    
     logging.info(f"entering items to cart from inventory page")
     inventory_page.add_items_to_cart()
+
     logging.info(f"checking if cart value is equal to 2")
     assert inventory_page.get_cart_count() == 2
     logging.info("cart value check successful")
@@ -24,5 +29,4 @@ def test_add_items_to_cart(driver):
 
     logging.info("clicking the cart icon to go to the cart page")
     inventory_page.clicking_cart_icon()
-    logging.info("clicking the cart icon to go to the cart page")
 

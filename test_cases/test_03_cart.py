@@ -1,6 +1,5 @@
 from pages.cart_page import CartPage
 import logging
-import time
 
 def test_remove_items_between_range(driver):
     cart_page = CartPage(driver)
